@@ -11,7 +11,7 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.provisioning.InMemoryUserDetailsManager;
 
 @Configuration
-public class ProjectConfig extends WebSecurityConfigurerAdapter {
+public class UserManagementConfig {
 
     @Bean
     public UserDetailsService userDetailsService() {
@@ -30,10 +30,4 @@ public class ProjectConfig extends WebSecurityConfigurerAdapter {
         return NoOpPasswordEncoder.getInstance();
     }
 
-    @Override
-    protected void configure(HttpSecurity http) throws Exception {
-        http.httpBasic();
-        http.authorizeRequests()
-                .anyRequest().authenticated();
-    }
 }
