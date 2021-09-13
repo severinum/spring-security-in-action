@@ -11,6 +11,7 @@ import org.springframework.security.provisioning.InMemoryUserDetailsManager;
 @Configuration
 public class ProjectConfig extends WebSecurityConfigurerAdapter {
 
+    /** This is the place when it differ from version V1 **/
     @Override
     protected void configure(AuthenticationManagerBuilder auth) throws Exception {
         var userDetailService = new InMemoryUserDetailsManager();
